@@ -18,7 +18,7 @@ vgcore.*
 *.log
 
 # IDE / Editor configs
-.vscode/
+.vscode
 .idea/
 *.swp
 *.swo
