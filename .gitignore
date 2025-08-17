@@ -1,0 +1,28 @@
+# Build artifacts
+/build/
+*.o
+*.a
+*.so
+*.out
+*.exe
+
+# Debugging / profiling
+*.gch
+*.dSYM/
+*.gcda
+*.gcno
+*.gcov
+vgcore.*
+
+# Logs
+*.log
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS junk
+.DS_Store
+Thumbs.db
