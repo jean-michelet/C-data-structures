@@ -1,11 +1,20 @@
 #include "linked_list.h"
 #include <stdlib.h>
 
+
+Node* init_node()
+{
+    Node *node = malloc(sizeof(Node));
+    node->next = NULL;
+
+    return node;
+}
+
 Node *insert(Node *head, int value, size_t index)
 {
     if (index == 0)
     {
-        Node *new_head = malloc(sizeof(Node));
+        Node *new_head = init_node();
         if (!new_head)
         {
             return NULL;
@@ -32,7 +41,7 @@ Node *insert(Node *head, int value, size_t index)
         return NULL;
     }
 
-    Node *node = malloc(sizeof(Node));
+    Node *node = init_node();
     if (!node)
     {
         return NULL;

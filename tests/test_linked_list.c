@@ -6,7 +6,7 @@
 
 Node *create_node(int value, Node *next)
 {
-    Node *node = malloc(sizeof(Node));
+    Node *node = init_node();
     node->value = value;
     node->next = next;
 

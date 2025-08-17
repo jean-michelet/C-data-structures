@@ -9,6 +9,7 @@ typedef struct Node
     struct Node *next;
 } Node;
 
+Node* init_node();
 Node* insert(Node* head, int value, size_t index);
 Node* remove_node(Node* head, int value);
 void free_linked_list(Node* head);
