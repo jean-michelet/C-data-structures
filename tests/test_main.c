@@ -13,6 +13,7 @@ void run_insertion_sort_tests(void);
 void run_linked_list_tests(void);
 void run_stack_tests(void);
 void run_queue_tests(void);
+void run_btree_tests(void);
 
 int main(void)
 {
@@ -21,6 +22,7 @@ int main(void)
     run_linked_list_tests();
     run_stack_tests();
     run_queue_tests();
+    run_btree_tests();
 
     if (tests_failed == 0)
     {
