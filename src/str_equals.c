@@ -1,5 +1,4 @@
 #include "str_equals.h"
-#include <string.h>
 
 bool str_equals(const char *left, const char *right)
 {

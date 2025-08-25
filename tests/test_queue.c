@@ -1,6 +1,5 @@
 #include "queue.h"
 #include "test_runner.h"
-#include <stdlib.h>
 
 void test_init_queue(void)
 {

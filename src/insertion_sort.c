@@ -1,8 +1,4 @@
 #include "insertion_sort.h"
-#include <stdlib.h>
-
-#include "insertion_sort.h"
-#include <stddef.h>
 
 void insertion_sort(int *arr, size_t n)
 {

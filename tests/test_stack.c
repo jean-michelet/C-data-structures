@@ -1,6 +1,5 @@
 #include "stack.h"
 #include "test_runner.h"
-#include <stdlib.h>
 
 void test_init_stack(void)
 {

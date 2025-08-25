@@ -1,7 +1,5 @@
 #include "str_equals.h"
 #include "test_runner.h"
-#include <stdio.h>
-#include <stdbool.h>
 
 void test_equal_strings(void) {
     ASSERT_TRUE(str_equals("aaab", "aaab") == true);

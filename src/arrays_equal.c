@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <stdbool.h>
 #include "arrays_equal.h"
 
 bool arrays_equal(const int *a, const int *b, size_t n)

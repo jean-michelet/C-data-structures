@@ -1,6 +1,4 @@
 #include "linked_list.h"
-#include <stdlib.h>
-
 
 Node* init_node()
 {

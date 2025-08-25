@@ -19,6 +19,9 @@ INC_DIR   := include
 TEST_DIR  := tests
 OBJ_DIR   := $(BUILD_DIR)/obj
 BIN_DIR   := $(BUILD_DIR)/bin
+MAIN_SRC  := $(SRC_DIR)/main.c
+MAIN_OBJ  := $(OBJ_DIR)/main.o
+MAIN_BIN  := $(BIN_DIR)/$(PROJECT)
 
 # --------------------------
 # Compiler/linker flags
@@ -50,21 +53,28 @@ print-%:
 # Phony targets
 # --------------------------
 
-.PHONY: all test fast-test memcheck asan clean print-%
+.PHONY: all test main fast-test memcheck asan clean print-%
 
 # Default target
 all: $(TEST_BIN)
 
+main: $(MAIN_BIN)
+	$(MAIN_BIN)
+
 # --------------------------
 # Compilation & linking
 # --------------------------
+
+# Rule to build main binary
+$(MAIN_BIN): $(filter-out $(OBJ_DIR)/test_%.o,$(OBJS)) $(MAIN_OBJ) | $(BIN_DIR)
+	$(CC) $^ -o $@ $(LDFLAGS)
 
 # Single pattern rule: build any obj from a %.c found via vpath
 $(OBJ_DIR)/%.o: %.c | $(OBJ_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Link final test binary
-$(TEST_BIN): $(OBJS) $(TEST_OBJS) | $(BIN_DIR)
+$(TEST_BIN): $(filter-out $(MAIN_OBJ),$(OBJS)) $(TEST_OBJS) | $(BIN_DIR)
 	$(CC) $^ -o $@ $(LDFLAGS)
 
 # Create build dirs

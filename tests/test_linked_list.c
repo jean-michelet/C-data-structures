@@ -1,8 +1,5 @@
 #include "linked_list.h"
 #include "test_runner.h"
-#include <stdio.h>
-#include <stdbool.h>
-#include <stdlib.h>
 
 Node *create_node(int value, Node *next)
 {

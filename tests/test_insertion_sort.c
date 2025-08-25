@@ -1,8 +1,6 @@
 #include "insertion_sort.h"
 #include "test_runner.h"
 #include "arrays_equal.h"
-#include <stdio.h>
-#include <stdbool.h>
 
 void test_sorts_correctly(void) {
     {
